@@ -58,6 +58,10 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(Catch2)
 
+# Specify the paths to the library and include directories for curl
+##include_directories("~/dev/curl/curl-8.11.0/include")
+##link_directories("~/dev/curl/curl-8.11.0/lib")
+
 include_directories(${PROJECT_SOURCE_DIR}) # for includiing headers in test files
 
 add_library(strava__lib main.cpp

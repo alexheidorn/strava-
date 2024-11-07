@@ -2,8 +2,8 @@ C:\Users\alexh\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCM
 -- Could NOT find CURL (missing: CURL_LIBRARY CURL_INCLUDE_DIR) 
 please install curl
 -- Using the multi-header code from E:/dev/strava++/cmake-build-debug/_deps/json-src/include/
--- Configuring done (3.2s)
-CMake Error at CMakeLists.txt:68 (target_link_libraries):
+-- Configuring done (3.0s)
+CMake Error at CMakeLists.txt:72 (target_link_libraries):
   Target "strava__lib" links to:
 
     CURL::libcurl
@@ -16,5 +16,5 @@ CMake Error at CMakeLists.txt:68 (target_link_libraries):
 
 
 
--- Generating done (0.2s)
+-- Generating done (0.1s)
 CMake Generate step failed.  Build files cannot be regenerated correctly.
