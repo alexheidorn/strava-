@@ -65,3 +65,6 @@ add_executable(strava__ main.cpp
         Activity.cpp
         Activity.h
 )
+add_executable(tests tests/curl_test.cpp
+        Activity.cpp
+        Activity.h)
