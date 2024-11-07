@@ -4,5 +4,6 @@ project(strava__)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(strava__ main.cpp
-        activity.cpp
-        activity.h)
+        Activity.cpp
+        Activity.h
+)
