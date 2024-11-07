@@ -1,3 +1,13 @@
+E:/dev/strava++/cmake-build-debug/CMakeFiles/strava__lib.dir
 E:/dev/strava++/cmake-build-debug/CMakeFiles/strava__.dir
+E:/dev/strava++/cmake-build-debug/CMakeFiles/tests.dir
 E:/dev/strava++/cmake-build-debug/CMakeFiles/edit_cache.dir
 E:/dev/strava++/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+E:/dev/strava++/cmake-build-debug/_deps/json-build/CMakeFiles/edit_cache.dir
+E:/dev/strava++/cmake-build-debug/_deps/json-build/CMakeFiles/rebuild_cache.dir
+E:/dev/strava++/cmake-build-debug/_deps/catch2-build/CMakeFiles/edit_cache.dir
+E:/dev/strava++/cmake-build-debug/_deps/catch2-build/CMakeFiles/rebuild_cache.dir
+E:/dev/strava++/cmake-build-debug/_deps/catch2-build/src/CMakeFiles/Catch2.dir
+E:/dev/strava++/cmake-build-debug/_deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir
+E:/dev/strava++/cmake-build-debug/_deps/catch2-build/src/CMakeFiles/edit_cache.dir
+E:/dev/strava++/cmake-build-debug/_deps/catch2-build/src/CMakeFiles/rebuild_cache.dir
