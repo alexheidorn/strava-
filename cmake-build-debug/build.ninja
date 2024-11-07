@@ -73,7 +73,7 @@ build CMakeFiles/strava__.dir/Activity.cpp.obj: CXX_COMPILER__strava___unscanned
 
 build strava__.exe: CXX_EXECUTABLE_LINKER__strava___Debug CMakeFiles/strava__.dir/main.cpp.obj CMakeFiles/strava__.dir/Activity.cpp.obj
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = -lCURL:libcurl  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\strava__.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -114,7 +114,7 @@ build CMakeFiles/tests.dir/Activity.cpp.obj: CXX_COMPILER__tests_unscanned_Debug
 
 build tests.exe: CXX_EXECUTABLE_LINKER__tests_Debug CMakeFiles/tests.dir/tests/curl_test.cpp.obj CMakeFiles/tests.dir/Activity.cpp.obj
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = -lCURL:libcurl  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\tests.dir
   POST_BUILD = cd .
   PRE_LINK = cd .

@@ -40,8 +40,10 @@ endif()
 # set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(CURL)
+message("curl libs: ${CURL_LIBRARIES}")
+message("curl dirs: ${CURL_INCLUDE_DIRS}")
 if (NOT CURL_FOUND)
-    message("please install curl")
+    message("Could not locate curl")
 endif (NOT CURL_FOUND)
 
 include(FetchContent)
@@ -64,18 +66,21 @@ FetchContent_MakeAvailable(Catch2)
 
 include_directories(${PROJECT_SOURCE_DIR}) # for includiing headers in test files
 
-add_library(strava__lib main.cpp
-        Activity.cpp
-        Activity.h
-)
+#add_library(strava__lib main.cpp
+ #       tests/curl_test.cpp
+  #      Activity.cpp
+   #     Activity.h
+#)
 
-target_link_libraries(strava__lib PRIVATE CURL::libcurl)
-target_link_libraries(strava__lib PRIVATE nlohmann_json::nlohmann_json)
+#target_link_libraries(strava__lib CURL::libcurl)
+#target_link_libraries(strava__lib nlohmann_json::nlohmann_json)
 
 add_executable(strava__ main.cpp
         Activity.cpp
-        Activity.h
-)
+        Activity.h)
 add_executable(tests tests/curl_test.cpp
         Activity.cpp
         Activity.h)
+
+target_link_libraries(strava__ CURL:libcurl)
+target_link_libraries(tests CURL:libcurl)

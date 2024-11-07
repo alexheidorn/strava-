@@ -1,20 +1,9 @@
 C:\Users\alexh\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/alexh/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S E:\dev\strava++ -B E:\dev\strava++\cmake-build-debug
 -- Could NOT find CURL (missing: CURL_LIBRARY CURL_INCLUDE_DIR) 
-please install curl
+curl libs: CURL_LIBRARY-NOTFOUND
+curl dirs: 
+Could not locate curl
 -- Using the multi-header code from E:/dev/strava++/cmake-build-debug/_deps/json-src/include/
--- Configuring done (3.0s)
-CMake Error at CMakeLists.txt:72 (target_link_libraries):
-  Target "strava__lib" links to:
-
-    CURL::libcurl
-
-  but the target was not found.  Possible reasons include:
-
-    * There is a typo in the target name.
-    * A find_package call is missing for an IMPORTED target.
-    * An ALIAS target is missing.
-
-
-
+-- Configuring done (2.8s)
 -- Generating done (0.1s)
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+-- Build files have been written to: E:/dev/strava++/cmake-build-debug
