@@ -39,6 +39,27 @@ endif()
 
 # set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+find_package(CURL)
+if (NOT CURL_FOUND)
+    message("please install curl")
+endif (NOT CURL_FOUND)
+
+include(FetchContent)
+
+FetchContent_Declare(json URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz)
+
+FetchContent_MakeAvailable(json)
+
+FetchContent_Declare(
+        Catch2
+        GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+        GIT_TAG        v3.5.2
+)
+
+FetchContent_MakeAvailable(Catch2)
+
+include_directories(${PROJECT_SOURCE_DIR}) # for includiing headers in test files
+
 
 add_executable(strava__ main.cpp
         Activity.cpp
