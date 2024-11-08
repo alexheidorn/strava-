@@ -43,7 +43,7 @@ find_package(CURL)
 message("curl libs: ${CURL_LIBRARIES}")
 message("curl dirs: ${CURL_INCLUDE_DIRS}")
 if (NOT CURL_FOUND)
-    message("Could not locate curl")
+    message("Could not locate curl. Please install or add to your system's PATH")
 endif (NOT CURL_FOUND)
 
 include(FetchContent)
@@ -64,7 +64,7 @@ FetchContent_MakeAvailable(Catch2)
 ##include_directories("~/dev/curl/curl-8.11.0/include")
 ##link_directories("~/dev/curl/curl-8.11.0/lib")
 
-include_directories(${PROJECT_SOURCE_DIR}) # for includiing headers in test files
+#include_directories(${PROJECT_SOURCE_DIR}) # for includiing headers in test files
 
 #add_library(strava__lib main.cpp
  #       tests/curl_test.cpp
@@ -77,10 +77,12 @@ include_directories(${PROJECT_SOURCE_DIR}) # for includiing headers in test file
 
 add_executable(strava__ main.cpp
         Activity.cpp
-        Activity.h)
+        Activity.h
+)
 add_executable(tests tests/curl_test.cpp
         Activity.cpp
-        Activity.h)
+        Activity.h
+)
 
 target_link_libraries(strava__ CURL:libcurl)
 target_link_libraries(tests CURL:libcurl)
