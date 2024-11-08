@@ -98,14 +98,14 @@ build cmake_object_order_depends_target_strava__: phony || .
 build CMakeFiles/strava__.dir/main.cpp.obj: CXX_COMPILER__strava___unscanned_Debug E$:/dev/strava++/main.cpp || cmake_object_order_depends_target_strava__
   DEP_FILE = CMakeFiles\strava__.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IE:/dev/strava++ -IC:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
+  INCLUDES = -IE:/dev/strava++ -isystem C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
   OBJECT_DIR = CMakeFiles\strava__.dir
   OBJECT_FILE_DIR = CMakeFiles\strava__.dir
 
 build CMakeFiles/strava__.dir/Activity.cpp.obj: CXX_COMPILER__strava___unscanned_Debug E$:/dev/strava++/Activity.cpp || cmake_object_order_depends_target_strava__
   DEP_FILE = CMakeFiles\strava__.dir\Activity.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IE:/dev/strava++ -IC:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
+  INCLUDES = -IE:/dev/strava++ -isystem C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
   OBJECT_DIR = CMakeFiles\strava__.dir
   OBJECT_FILE_DIR = CMakeFiles\strava__.dir
 
@@ -117,9 +117,9 @@ build CMakeFiles/strava__.dir/Activity.cpp.obj: CXX_COMPILER__strava___unscanned
 #############################################
 # Link the executable strava__.exe
 
-build strava__.exe: CXX_EXECUTABLE_LINKER__strava___Debug CMakeFiles/strava__.dir/main.cpp.obj CMakeFiles/strava__.dir/Activity.cpp.obj
+build strava__.exe: CXX_EXECUTABLE_LINKER__strava___Debug CMakeFiles/strava__.dir/main.cpp.obj CMakeFiles/strava__.dir/Activity.cpp.obj | C$:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\strava__.dir
   POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D E:\dev\strava++\cmake-build-debug && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/alexh/dev/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary E:/dev/strava++/cmake-build-debug/strava__.exe -installedDir C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/bin -OutVariable out"
   PRE_LINK = cd .
@@ -139,14 +139,14 @@ build cmake_object_order_depends_target_tests: phony || .
 build CMakeFiles/tests.dir/tests/curl_test.cpp.obj: CXX_COMPILER__tests_unscanned_Debug E$:/dev/strava++/tests/curl_test.cpp || cmake_object_order_depends_target_tests
   DEP_FILE = CMakeFiles\tests.dir\tests\curl_test.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IE:/dev/strava++ -IC:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
+  INCLUDES = -IE:/dev/strava++ -isystem C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
   OBJECT_DIR = CMakeFiles\tests.dir
   OBJECT_FILE_DIR = CMakeFiles\tests.dir\tests
 
 build CMakeFiles/tests.dir/Activity.cpp.obj: CXX_COMPILER__tests_unscanned_Debug E$:/dev/strava++/Activity.cpp || cmake_object_order_depends_target_tests
   DEP_FILE = CMakeFiles\tests.dir\Activity.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IE:/dev/strava++ -IC:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
+  INCLUDES = -IE:/dev/strava++ -isystem C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
   OBJECT_DIR = CMakeFiles\tests.dir
   OBJECT_FILE_DIR = CMakeFiles\tests.dir
 
@@ -158,9 +158,9 @@ build CMakeFiles/tests.dir/Activity.cpp.obj: CXX_COMPILER__tests_unscanned_Debug
 #############################################
 # Link the executable tests.exe
 
-build tests.exe: CXX_EXECUTABLE_LINKER__tests_Debug CMakeFiles/tests.dir/tests/curl_test.cpp.obj CMakeFiles/tests.dir/Activity.cpp.obj
+build tests.exe: CXX_EXECUTABLE_LINKER__tests_Debug CMakeFiles/tests.dir/tests/curl_test.cpp.obj CMakeFiles/tests.dir/Activity.cpp.obj | C$:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\tests.dir
   POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D E:\dev\strava++\cmake-build-debug && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/alexh/dev/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary E:/dev/strava++/cmake-build-debug/tests.exe -installedDir C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/bin -OutVariable out"
   PRE_LINK = cd .

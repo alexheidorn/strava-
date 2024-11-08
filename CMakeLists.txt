@@ -40,7 +40,7 @@ endif()
 # set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Add vcpkg toolchain file
-set(CMAKE_TOOLCHAIN_FILE "C:/User/alexh/dev/vckpg/scripts/buildsystems/vcpkg.cmake")
+set(CMAKE_TOOLCHAIN_FILE "-DCMAKE_TOOLCHAIN_FILE=C:/Users/alexh/dev/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
 
 #Include curl
@@ -78,8 +78,8 @@ add_library(strava__lib main.cpp
         Activity.h
 )
 
-target_link_libraries(strava__lib CURL::libcurl)
-target_link_libraries(strava__lib nlohmann_json::nlohmann_json)
+target_link_libraries(strava__lib PRIVATE CURL::libcurl)
+target_link_libraries(strava__lib PRIVATE nlohmann_json::nlohmann_json)
 
 add_executable(strava__ main.cpp
         Activity.cpp
@@ -90,5 +90,5 @@ add_executable(tests tests/curl_test.cpp
         Activity.h
 )
 
-#target_link_libraries(strava__ PRIVATE CURL:libcurl)
-#target_link_libraries(tests PRIVATE CURL:libcurl)
+target_link_libraries(strava__ PRIVATE CURL::libcurl)
+target_link_libraries(tests PRIVATE CURL::libcurl)

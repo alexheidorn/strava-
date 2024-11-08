@@ -2,6 +2,6 @@ C:\Users\alexh\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCM
 curl libs: optimized;C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/lib/libcurl.dll.a;debug;C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a
 curl dirs: C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
 -- Using the multi-header code from E:/dev/strava++/cmake-build-debug/_deps/json-src/include/
--- Configuring done (2.3s)
+-- Configuring done (2.9s)
 -- Generating done (0.0s)
 -- Build files have been written to: E:/dev/strava++/cmake-build-debug
