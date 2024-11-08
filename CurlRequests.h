@@ -43,7 +43,7 @@ public:
 
     void requestAccessToken(std::string access_token);
     void setHeaders();
-    void makeRequest(const std::string &stravaURL   );
+    void makeRequest(const char* stravaURL);
 
 };
 

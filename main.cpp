@@ -7,5 +7,5 @@
 
 int main() {
     CurlRequests curlRequests;
-    curlRequests.makeRequest(curlRequests.stravaAthlete);
+    curlRequests.makeRequest(curlRequests.stravaAthlete.c_str());
 }
