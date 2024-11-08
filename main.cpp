@@ -2,8 +2,10 @@
 // Created by saga on 11/8/2024.
 //
 
-#include <cstdio>
+
+#include "CurlRequests.h"
 
 int main() {
-    printf("Hello World\n");
+    CurlRequests curlRequests;
+    curlRequests.makeRequest(curlRequests.stravaAthlete);
 }
