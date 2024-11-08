@@ -1,6 +1,7 @@
 E:/dev/strava++/cmake-build-debug/CMakeFiles/strava__lib.dir
 E:/dev/strava++/cmake-build-debug/CMakeFiles/strava__.dir
-E:/dev/strava++/cmake-build-debug/CMakeFiles/tests.dir
+E:/dev/strava++/cmake-build-debug/CMakeFiles/curlTest.dir
+E:/dev/strava++/cmake-build-debug/CMakeFiles/apiTest.dir
 E:/dev/strava++/cmake-build-debug/CMakeFiles/edit_cache.dir
 E:/dev/strava++/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 E:/dev/strava++/cmake-build-debug/_deps/json-build/CMakeFiles/edit_cache.dir

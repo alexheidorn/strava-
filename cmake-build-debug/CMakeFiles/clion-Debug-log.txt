@@ -2,6 +2,19 @@ C:\Users\alexh\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCM
 curl libs: optimized;C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/lib/libcurl.dll.a;debug;C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a
 curl dirs: C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
 -- Using the multi-header code from E:/dev/strava++/cmake-build-debug/_deps/json-src/include/
--- Configuring done (3.9s)
--- Generating done (0.2s)
--- Build files have been written to: E:/dev/strava++/cmake-build-debug
+-- Configuring done (3.2s)
+CMake Error at CMakeLists.txt:109 (target_link_libraries):
+  Target "apiTest" links to:
+
+    CURL::liburl
+
+  but the target was not found.  Possible reasons include:
+
+    * There is a typo in the target name.
+    * A find_package call is missing for an IMPORTED target.
+    * An ALIAS target is missing.
+
+
+
+-- Generating done (0.1s)
+CMake Generate step failed.  Build files cannot be regenerated correctly.
