@@ -70,6 +70,13 @@ build CMakeFiles/strava__lib.dir/Activity.cpp.obj: CXX_COMPILER__strava__lib_uns
   OBJECT_DIR = CMakeFiles\strava__lib.dir
   OBJECT_FILE_DIR = CMakeFiles\strava__lib.dir
 
+build CMakeFiles/strava__lib.dir/CurlRequests.cpp.obj: CXX_COMPILER__strava__lib_unscanned_Debug E$:/dev/strava++/CurlRequests.cpp || cmake_object_order_depends_target_strava__lib
+  DEP_FILE = CMakeFiles\strava__lib.dir\CurlRequests.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IE:/dev/strava++ -IE:/dev/strava++/cmake-build-debug/_deps/json-src/include -isystem C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
+  OBJECT_DIR = CMakeFiles\strava__lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\strava__lib.dir
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target strava__lib
@@ -78,7 +85,7 @@ build CMakeFiles/strava__lib.dir/Activity.cpp.obj: CXX_COMPILER__strava__lib_uns
 #############################################
 # Link the static library libstrava__lib.a
 
-build libstrava__lib.a: CXX_STATIC_LIBRARY_LINKER__strava__lib_Debug CMakeFiles/strava__lib.dir/main.cpp.obj CMakeFiles/strava__lib.dir/tests/curl_test.cpp.obj CMakeFiles/strava__lib.dir/Activity.cpp.obj
+build libstrava__lib.a: CXX_STATIC_LIBRARY_LINKER__strava__lib_Debug CMakeFiles/strava__lib.dir/main.cpp.obj CMakeFiles/strava__lib.dir/tests/curl_test.cpp.obj CMakeFiles/strava__lib.dir/Activity.cpp.obj CMakeFiles/strava__lib.dir/CurlRequests.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles\strava__lib.dir
   POST_BUILD = cd .
@@ -109,6 +116,13 @@ build CMakeFiles/strava__.dir/Activity.cpp.obj: CXX_COMPILER__strava___unscanned
   OBJECT_DIR = CMakeFiles\strava__.dir
   OBJECT_FILE_DIR = CMakeFiles\strava__.dir
 
+build CMakeFiles/strava__.dir/CurlRequests.cpp.obj: CXX_COMPILER__strava___unscanned_Debug E$:/dev/strava++/CurlRequests.cpp || cmake_object_order_depends_target_strava__
+  DEP_FILE = CMakeFiles\strava__.dir\CurlRequests.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IE:/dev/strava++ -isystem C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
+  OBJECT_DIR = CMakeFiles\strava__.dir
+  OBJECT_FILE_DIR = CMakeFiles\strava__.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target strava__
@@ -117,7 +131,7 @@ build CMakeFiles/strava__.dir/Activity.cpp.obj: CXX_COMPILER__strava___unscanned
 #############################################
 # Link the executable strava__.exe
 
-build strava__.exe: CXX_EXECUTABLE_LINKER__strava___Debug CMakeFiles/strava__.dir/main.cpp.obj CMakeFiles/strava__.dir/Activity.cpp.obj | C$:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a
+build strava__.exe: CXX_EXECUTABLE_LINKER__strava___Debug CMakeFiles/strava__.dir/main.cpp.obj CMakeFiles/strava__.dir/Activity.cpp.obj CMakeFiles/strava__.dir/CurlRequests.cpp.obj | C$:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a
   FLAGS = -g
   LINK_LIBRARIES = C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\strava__.dir
@@ -150,6 +164,13 @@ build CMakeFiles/tests.dir/Activity.cpp.obj: CXX_COMPILER__tests_unscanned_Debug
   OBJECT_DIR = CMakeFiles\tests.dir
   OBJECT_FILE_DIR = CMakeFiles\tests.dir
 
+build CMakeFiles/tests.dir/CurlRequests.cpp.obj: CXX_COMPILER__tests_unscanned_Debug E$:/dev/strava++/CurlRequests.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = CMakeFiles\tests.dir\CurlRequests.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IE:/dev/strava++ -isystem C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
+  OBJECT_DIR = CMakeFiles\tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\tests.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target tests
@@ -158,7 +179,7 @@ build CMakeFiles/tests.dir/Activity.cpp.obj: CXX_COMPILER__tests_unscanned_Debug
 #############################################
 # Link the executable tests.exe
 
-build tests.exe: CXX_EXECUTABLE_LINKER__tests_Debug CMakeFiles/tests.dir/tests/curl_test.cpp.obj CMakeFiles/tests.dir/Activity.cpp.obj | C$:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a
+build tests.exe: CXX_EXECUTABLE_LINKER__tests_Debug CMakeFiles/tests.dir/tests/curl_test.cpp.obj CMakeFiles/tests.dir/Activity.cpp.obj CMakeFiles/tests.dir/CurlRequests.cpp.obj | C$:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a
   FLAGS = -g
   LINK_LIBRARIES = C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\tests.dir

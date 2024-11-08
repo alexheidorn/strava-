@@ -76,6 +76,8 @@ add_library(strava__lib main.cpp
         tests/curl_test.cpp
         Activity.cpp
         Activity.h
+        CurlRequests.cpp
+        CurlRequests.h
 )
 
 target_link_libraries(strava__lib PRIVATE CURL::libcurl)
@@ -84,10 +86,14 @@ target_link_libraries(strava__lib PRIVATE nlohmann_json::nlohmann_json)
 add_executable(strava__ main.cpp
         Activity.cpp
         Activity.h
+        CurlRequests.cpp
+        CurlRequests.h
 )
 add_executable(tests tests/curl_test.cpp
         Activity.cpp
         Activity.h
+        CurlRequests.cpp
+        CurlRequests.h
 )
 
 target_link_libraries(strava__ PRIVATE CURL::libcurl)
