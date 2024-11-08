@@ -10,14 +10,18 @@
 void CurlRequests::requestAccessToken(const std::string access_token) {
 }
 
+// Set the Authorization header with the access token
 void CurlRequests::setHeaders() {
     curlHeaders = curl_slist_append(curlHeaders, ("Authorization: Bearer " + access_token).c_str());
     curl_easy_setopt(curlHandle, CURLOPT_HTTPHEADER, curlHeaders);
 }
 
-void CurlRequests::makeRequest() {
+void CurlRequests::makeRequest(const std::string &stravaURL) {
     // Set the URL for the Strava API endpoint to retrieve the logged-in athlete's details
-    curl_easy_setopt(curlHandle, CURLOPT_URL, stravaAthlete);
+    curl_easy_setopt(curlHandle, CURLOPT_URL, stravaURL);
+
+    // Set the Authorization header with the access token
+    setHeaders();
 
     // Set up the callback function to capture the response
     curl_easy_setopt(curlHandle, CURLOPT_WRITEFUNCTION, WriteCallback);

@@ -5,6 +5,7 @@
 #ifndef CURLREQUESTS_H
 #define CURLREQUESTS_H
 
+#include <stdexcept>
 #include <curl/curl.h>
 #include <string>
 
@@ -17,17 +18,20 @@ static size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* use
 class CurlRequests {
 private:
     // Replace this with your Strava API access token
-    std::string access_token = "93fa4b6c3a39d4ee147dc7ca952fd51412162394";
+    std::string access_token = "b658208ad9d504b41b7981b915dc1461947f15fe";
     std::string readBuffer;
     CURL* curlHandle;
     CURLcode curlResult;
 
-    struct curl_slist* curlHeaders = NULL;
+    struct curl_slist* curlHeaders = nullptr;
 
 
 public:
     CurlRequests() {
         curlHandle = curl_easy_init();
+        if (!curlHandle) {
+            throw std::runtime_error("curl_easy_init() failed");
+        }
     }
     ~CurlRequests() {
         curl_easy_cleanup(curlHandle);
@@ -39,7 +43,7 @@ public:
 
     void requestAccessToken(std::string access_token);
     void setHeaders();
-    void makeRequest();
+    void makeRequest(const std::string &stravaURL   );
 
 };
 
