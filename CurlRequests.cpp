@@ -18,7 +18,7 @@ void CurlRequests::setHeaders() {
 
 void CurlRequests::makeRequest(const std::string &stravaURL) {
     // Set the URL for the Strava API endpoint to retrieve the logged-in athlete's details
-    curl_easy_setopt(curlHandle, CURLOPT_URL, stravaURL);
+    curl_easy_setopt(curlHandle, CURLOPT_URL, "https://www.strava.com/api/v3/athlete");
 
     // Set the Authorization header with the access token
     setHeaders();
