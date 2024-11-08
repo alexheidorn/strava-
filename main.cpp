@@ -14,7 +14,7 @@ static size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* use
 
 int main() {
     // Replace this with your Strava API access token
-    std::string access_token = "YOUR_ACCESS_TOKEN";
+    std::string access_token = "93fa4b6c3a39d4ee147dc7ca952fd51412162394";
     std::string readBuffer;
 
     // Initialize CURL
@@ -27,8 +27,8 @@ int main() {
         curl_easy_setopt(curl, CURLOPT_URL, "https://www.strava.com/api/v3/athlete");
 
         // Set the Authorization header with the access token
-        struct curl_slist* headers = nullptr;
-        headers = curl_slist_append(headers, ("Authorization: Bearer " + access_token).c_str());
+        //struct curl_slist* headers = nullptr;
+        //headers = curl_slist_append(headers, ("Authorization: Bearer " + access_token).c_str());
         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
 
         // Set up the callback function to capture the response
