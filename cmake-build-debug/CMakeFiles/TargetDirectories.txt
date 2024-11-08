@@ -1,3 +1,4 @@
+E:/dev/strava++/cmake-build-debug/CMakeFiles/strava__lib.dir
 E:/dev/strava++/cmake-build-debug/CMakeFiles/strava__.dir
 E:/dev/strava++/cmake-build-debug/CMakeFiles/tests.dir
 E:/dev/strava++/cmake-build-debug/CMakeFiles/edit_cache.dir

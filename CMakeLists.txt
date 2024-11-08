@@ -39,7 +39,12 @@ endif()
 
 # set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-find_package(CURL)
+# Add vcpkg toolchain file
+set(CMAKE_TOOLCHAIN_FILE "C:/User/alexh/dev/vckpg/scripts/buildsystems/vcpkg.cmake")
+
+
+#Include curl
+find_package(CURL REQUIRED)
 message("curl libs: ${CURL_LIBRARIES}")
 message("curl dirs: ${CURL_INCLUDE_DIRS}")
 if (NOT CURL_FOUND)
@@ -64,16 +69,17 @@ FetchContent_MakeAvailable(Catch2)
 ##include_directories("~/dev/curl/curl-8.11.0/include")
 ##link_directories("~/dev/curl/curl-8.11.0/lib")
 
-#include_directories(${PROJECT_SOURCE_DIR}) # for includiing headers in test files
+include_directories(${PROJECT_SOURCE_DIR}) # for includiing headers in test files
+include_directories(${CURL_INCLUDE_DIRS})
 
-#add_library(strava__lib main.cpp
- #       tests/curl_test.cpp
-  #      Activity.cpp
-   #     Activity.h
-#)
+add_library(strava__lib main.cpp
+        tests/curl_test.cpp
+        Activity.cpp
+        Activity.h
+)
 
-#target_link_libraries(strava__lib CURL::libcurl)
-#target_link_libraries(strava__lib nlohmann_json::nlohmann_json)
+target_link_libraries(strava__lib CURL::libcurl)
+target_link_libraries(strava__lib nlohmann_json::nlohmann_json)
 
 add_executable(strava__ main.cpp
         Activity.cpp
@@ -84,5 +90,5 @@ add_executable(tests tests/curl_test.cpp
         Activity.h
 )
 
-target_link_libraries(strava__ CURL:libcurl)
-target_link_libraries(tests CURL:libcurl)
+#target_link_libraries(strava__ PRIVATE CURL:libcurl)
+#target_link_libraries(tests PRIVATE CURL:libcurl)
