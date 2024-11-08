@@ -27,8 +27,8 @@ int main() {
         curl_easy_setopt(curl, CURLOPT_URL, "https://www.strava.com/api/v3/athlete");
 
         // Set the Authorization header with the access token
-        //struct curl_slist* headers = nullptr;
-        //headers = curl_slist_append(headers, ("Authorization: Bearer " + access_token).c_str());
+        struct curl_slist* headers = nullptr;
+        headers = curl_slist_append(headers, ("Authorization: Bearer " + access_token).c_str());
         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
 
         // Set up the callback function to capture the response
