@@ -97,7 +97,7 @@ add_executable(curlTest tests/curl_test.cpp
         CurlRequests.cpp
         CurlRequests.h
 )
-add_executable(apiTest tests/strava_api_test.cpp
+add_executable(stravaApiTest tests/strava_api_test.cpp
         Activity.cpp
         Activity.h
         CurlRequests.cpp
@@ -106,4 +106,4 @@ add_executable(apiTest tests/strava_api_test.cpp
 
 target_link_libraries(strava__ PRIVATE CURL::libcurl)
 target_link_libraries(curlTest PRIVATE CURL::libcurl)
-target_link_libraries(apiTest PRIVATE CURL::liburl)
+target_link_libraries(stravaApiTest PRIVATE ${CURL_LIBRARIES})

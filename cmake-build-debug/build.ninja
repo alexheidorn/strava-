@@ -149,59 +149,107 @@ build strava__.exe: CXX_EXECUTABLE_LINKER__strava___Debug CMakeFiles/strava__.di
   TARGET_PDB = strava__.exe.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target tests
+# Object build statements for EXECUTABLE target curlTest
 
 
 #############################################
-# Order-only phony target for tests
+# Order-only phony target for curlTest
 
-build cmake_object_order_depends_target_tests: phony || .
+build cmake_object_order_depends_target_curlTest: phony || .
 
-build CMakeFiles/tests.dir/tests/curl_test.cpp.obj: CXX_COMPILER__tests_unscanned_Debug E$:/dev/strava++/tests/curl_test.cpp || cmake_object_order_depends_target_tests
-  DEP_FILE = CMakeFiles\tests.dir\tests\curl_test.cpp.obj.d
+build CMakeFiles/curlTest.dir/tests/curl_test.cpp.obj: CXX_COMPILER__curlTest_unscanned_Debug E$:/dev/strava++/tests/curl_test.cpp || cmake_object_order_depends_target_curlTest
+  DEP_FILE = CMakeFiles\curlTest.dir\tests\curl_test.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -IE:/dev/strava++ -isystem C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
-  OBJECT_DIR = CMakeFiles\tests.dir
-  OBJECT_FILE_DIR = CMakeFiles\tests.dir\tests
+  OBJECT_DIR = CMakeFiles\curlTest.dir
+  OBJECT_FILE_DIR = CMakeFiles\curlTest.dir\tests
 
-build CMakeFiles/tests.dir/tests/strava_api_test.cpp.obj: CXX_COMPILER__tests_unscanned_Debug E$:/dev/strava++/tests/strava_api_test.cpp || cmake_object_order_depends_target_tests
-  DEP_FILE = CMakeFiles\tests.dir\tests\strava_api_test.cpp.obj.d
+build CMakeFiles/curlTest.dir/tests/strava_api_test.cpp.obj: CXX_COMPILER__curlTest_unscanned_Debug E$:/dev/strava++/tests/strava_api_test.cpp || cmake_object_order_depends_target_curlTest
+  DEP_FILE = CMakeFiles\curlTest.dir\tests\strava_api_test.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -IE:/dev/strava++ -isystem C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
-  OBJECT_DIR = CMakeFiles\tests.dir
-  OBJECT_FILE_DIR = CMakeFiles\tests.dir\tests
+  OBJECT_DIR = CMakeFiles\curlTest.dir
+  OBJECT_FILE_DIR = CMakeFiles\curlTest.dir\tests
 
-build CMakeFiles/tests.dir/Activity.cpp.obj: CXX_COMPILER__tests_unscanned_Debug E$:/dev/strava++/Activity.cpp || cmake_object_order_depends_target_tests
-  DEP_FILE = CMakeFiles\tests.dir\Activity.cpp.obj.d
+build CMakeFiles/curlTest.dir/Activity.cpp.obj: CXX_COMPILER__curlTest_unscanned_Debug E$:/dev/strava++/Activity.cpp || cmake_object_order_depends_target_curlTest
+  DEP_FILE = CMakeFiles\curlTest.dir\Activity.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -IE:/dev/strava++ -isystem C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
-  OBJECT_DIR = CMakeFiles\tests.dir
-  OBJECT_FILE_DIR = CMakeFiles\tests.dir
+  OBJECT_DIR = CMakeFiles\curlTest.dir
+  OBJECT_FILE_DIR = CMakeFiles\curlTest.dir
 
-build CMakeFiles/tests.dir/CurlRequests.cpp.obj: CXX_COMPILER__tests_unscanned_Debug E$:/dev/strava++/CurlRequests.cpp || cmake_object_order_depends_target_tests
-  DEP_FILE = CMakeFiles\tests.dir\CurlRequests.cpp.obj.d
+build CMakeFiles/curlTest.dir/CurlRequests.cpp.obj: CXX_COMPILER__curlTest_unscanned_Debug E$:/dev/strava++/CurlRequests.cpp || cmake_object_order_depends_target_curlTest
+  DEP_FILE = CMakeFiles\curlTest.dir\CurlRequests.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -IE:/dev/strava++ -isystem C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
-  OBJECT_DIR = CMakeFiles\tests.dir
-  OBJECT_FILE_DIR = CMakeFiles\tests.dir
+  OBJECT_DIR = CMakeFiles\curlTest.dir
+  OBJECT_FILE_DIR = CMakeFiles\curlTest.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target tests
+# Link build statements for EXECUTABLE target curlTest
 
 
 #############################################
-# Link the executable tests.exe
+# Link the executable curlTest.exe
 
-build tests.exe: CXX_EXECUTABLE_LINKER__tests_Debug CMakeFiles/tests.dir/tests/curl_test.cpp.obj CMakeFiles/tests.dir/tests/strava_api_test.cpp.obj CMakeFiles/tests.dir/Activity.cpp.obj CMakeFiles/tests.dir/CurlRequests.cpp.obj | C$:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a
+build curlTest.exe: CXX_EXECUTABLE_LINKER__curlTest_Debug CMakeFiles/curlTest.dir/tests/curl_test.cpp.obj CMakeFiles/curlTest.dir/tests/strava_api_test.cpp.obj CMakeFiles/curlTest.dir/Activity.cpp.obj CMakeFiles/curlTest.dir/CurlRequests.cpp.obj | C$:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a
   FLAGS = -g
   LINK_LIBRARIES = C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\tests.dir
-  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D E:\dev\strava++\cmake-build-debug && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/alexh/dev/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary E:/dev/strava++/cmake-build-debug/tests.exe -installedDir C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/bin -OutVariable out"
+  OBJECT_DIR = CMakeFiles\curlTest.dir
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D E:\dev\strava++\cmake-build-debug && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/alexh/dev/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary E:/dev/strava++/cmake-build-debug/curlTest.exe -installedDir C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/bin -OutVariable out"
   PRE_LINK = cd .
-  TARGET_FILE = tests.exe
-  TARGET_IMPLIB = libtests.dll.a
-  TARGET_PDB = tests.exe.dbg
+  TARGET_FILE = curlTest.exe
+  TARGET_IMPLIB = libcurlTest.dll.a
+  TARGET_PDB = curlTest.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target stravaApiTest
+
+
+#############################################
+# Order-only phony target for stravaApiTest
+
+build cmake_object_order_depends_target_stravaApiTest: phony || .
+
+build CMakeFiles/stravaApiTest.dir/tests/strava_api_test.cpp.obj: CXX_COMPILER__stravaApiTest_unscanned_Debug E$:/dev/strava++/tests/strava_api_test.cpp || cmake_object_order_depends_target_stravaApiTest
+  DEP_FILE = CMakeFiles\stravaApiTest.dir\tests\strava_api_test.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IE:/dev/strava++ -IC:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
+  OBJECT_DIR = CMakeFiles\stravaApiTest.dir
+  OBJECT_FILE_DIR = CMakeFiles\stravaApiTest.dir\tests
+
+build CMakeFiles/stravaApiTest.dir/Activity.cpp.obj: CXX_COMPILER__stravaApiTest_unscanned_Debug E$:/dev/strava++/Activity.cpp || cmake_object_order_depends_target_stravaApiTest
+  DEP_FILE = CMakeFiles\stravaApiTest.dir\Activity.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IE:/dev/strava++ -IC:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
+  OBJECT_DIR = CMakeFiles\stravaApiTest.dir
+  OBJECT_FILE_DIR = CMakeFiles\stravaApiTest.dir
+
+build CMakeFiles/stravaApiTest.dir/CurlRequests.cpp.obj: CXX_COMPILER__stravaApiTest_unscanned_Debug E$:/dev/strava++/CurlRequests.cpp || cmake_object_order_depends_target_stravaApiTest
+  DEP_FILE = CMakeFiles\stravaApiTest.dir\CurlRequests.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IE:/dev/strava++ -IC:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/include
+  OBJECT_DIR = CMakeFiles\stravaApiTest.dir
+  OBJECT_FILE_DIR = CMakeFiles\stravaApiTest.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target stravaApiTest
+
+
+#############################################
+# Link the executable stravaApiTest.exe
+
+build stravaApiTest.exe: CXX_EXECUTABLE_LINKER__stravaApiTest_Debug CMakeFiles/stravaApiTest.dir/tests/strava_api_test.cpp.obj CMakeFiles/stravaApiTest.dir/Activity.cpp.obj CMakeFiles/stravaApiTest.dir/CurlRequests.cpp.obj | C$:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a
+  FLAGS = -g
+  LINK_LIBRARIES = C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\stravaApiTest.dir
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D E:\dev\strava++\cmake-build-debug && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/alexh/dev/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary E:/dev/strava++/cmake-build-debug/stravaApiTest.exe -installedDir C:/Users/alexh/dev/vcpkg/installed/x64-mingw-dynamic/debug/bin -OutVariable out"
+  PRE_LINK = cd .
+  TARGET_FILE = stravaApiTest.exe
+  TARGET_IMPLIB = libstravaApiTest.dll.a
+  TARGET_PDB = stravaApiTest.exe.dbg
 
 
 #############################################
@@ -1117,15 +1165,17 @@ build Catch2: phony _deps/catch2-build/src/libCatch2d.a
 
 build Catch2WithMain: phony _deps/catch2-build/src/libCatch2Maind.a
 
+build curlTest: phony curlTest.exe
+
 build libCatch2Maind.a: phony _deps/catch2-build/src/libCatch2Maind.a
 
 build libCatch2d.a: phony _deps/catch2-build/src/libCatch2d.a
 
+build stravaApiTest: phony stravaApiTest.exe
+
 build strava__: phony strava__.exe
 
 build strava__lib: phony libstrava__lib.a
-
-build tests: phony tests.exe
 
 # =============================================================================
 # Folder targets.
@@ -1135,7 +1185,7 @@ build tests: phony tests.exe
 #############################################
 # Folder: E:/dev/strava++/cmake-build-debug
 
-build all: phony libstrava__lib.a strava__.exe tests.exe _deps/json-build/all _deps/catch2-build/all
+build all: phony libstrava__lib.a strava__.exe curlTest.exe stravaApiTest.exe _deps/json-build/all _deps/catch2-build/all
 
 # =============================================================================
 
