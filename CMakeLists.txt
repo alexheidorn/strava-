@@ -72,7 +72,9 @@ FetchContent_MakeAvailable(Catch2)
 include_directories(${PROJECT_SOURCE_DIR} # for includiing headers in test files
         ${CURL_INCLUDE_DIRS}
         ${PROJECT_SOURCE_DIR}/tests
-        ${PROJECT_SOURCE_DIR}/authorization)
+        ${PROJECT_SOURCE_DIR}/authorization
+        ${PROJECT_SOURCE_DIR}/JSONs
+)
 
 add_library(strava__lib main.cpp
         tests/curl_test.cpp
