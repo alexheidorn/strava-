@@ -12,14 +12,7 @@ int main() {
     CurlRequests curlRequests;
     curlRequests.setAccessToken(accessToken);
 
-    CURLcode curlResult = curlRequests.makeRequest(curlRequests.stravaAthlete.c_str());
-
-    // Check for errors
-    if(curlResult != CURLE_OK) {
-        std::cerr << "curl_easy_perform() failed: " << curl_easy_strerror(curlResult) << std::endl;
-    } else {
-        std::cout << "Logged-in Athlete Information:\n" << curlRequests.getReadBuffer() << std::endl;
-    }
+    curlRequests.makeRequest(curlRequests.stravaAthlete.c_str());
 
     curlRequests.makeRequest(curlRequests.stravaActivity.c_str());
 }

@@ -23,7 +23,7 @@ void CurlRequests::setHeaders() {
 }
 
 // URL MUST be cString (char* format to work
-CURLcode CurlRequests::makeRequest(const char* stravaURL) {
+void CurlRequests::makeRequest(const char* stravaURL) {
     // Set the URL for the Strava API endpoint to retrieve the logged-in athlete's details
     curl_easy_setopt(curlHandle, CURLOPT_URL, stravaURL);
 
@@ -35,7 +35,14 @@ CURLcode CurlRequests::makeRequest(const char* stravaURL) {
     curl_easy_setopt(curlHandle, CURLOPT_WRITEDATA, &readBuffer);
 
     // Perform the request
-    return curl_easy_perform(curlHandle);
+    curlResult = curl_easy_perform(curlHandle);
+
+    // Check for errors
+    if(curlResult != CURLE_OK) {
+        std::cerr << "curl_easy_perform() failed: " << curl_easy_strerror(curlResult) << std::endl;
+    } else {
+        std::cout << "Logged-in Athlete Information:\n" << readBuffer << std::endl;
+    }
 
 }
 
