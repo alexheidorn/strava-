@@ -16,7 +16,7 @@ class ActivityStorage {
     public:
         void addActivity(Activity activity);
         Activity getActivityById(int id);
-        Activity getLastActivity();
+        Activity getMostRecentActivity();
 
 };
 
