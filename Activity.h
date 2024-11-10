@@ -30,6 +30,8 @@ class Activity {
         // / maxSpeed
 
     public:
+        int getId() const { return id; }
+    
 
 
 
