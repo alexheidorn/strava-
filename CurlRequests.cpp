@@ -32,3 +32,7 @@ CURLcode CurlRequests::makeRequest(const char* stravaURL) {
     return curl_easy_perform(curlHandle);
 
 }
+
+std::string CurlRequests::getReadBuffer() {
+    return readBuffer;
+}
