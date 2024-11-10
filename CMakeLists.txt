@@ -69,8 +69,10 @@ FetchContent_MakeAvailable(Catch2)
 ##include_directories("~/dev/curl/curl-8.11.0/include")
 ##link_directories("~/dev/curl/curl-8.11.0/lib")
 
-include_directories(${PROJECT_SOURCE_DIR}) # for includiing headers in test files
-include_directories(${CURL_INCLUDE_DIRS})
+include_directories(${PROJECT_SOURCE_DIR} # for includiing headers in test files
+        ${CURL_INCLUDE_DIRS}
+        ${PROJECT_SOURCE_DIR}/tests
+        ${PROJECT_SOURCE_DIR}/authorization)
 
 add_library(strava__lib main.cpp
         tests/curl_test.cpp
@@ -86,10 +88,11 @@ add_library(strava__lib main.cpp
         authorization/AuthorizationTokens.h
         ActivityStorage.cpp
         ActivityStorage.h
+        tests/nlohmann_test.cpp
 )
 
-target_link_libraries(strava__lib PRIVATE CURL::libcurl)
-target_link_libraries(strava__lib PRIVATE nlohmann_json::nlohmann_json)
+target_link_libraries(strava__lib PRIVATE CURL::libcurl
+        nlohmann_json::nlohmann_json)
 
 add_executable(strava__ main.cpp
         Activity.cpp
@@ -145,4 +148,19 @@ target_link_libraries(strava__ PRIVATE CURL::libcurl)
 target_link_libraries(curlTest PRIVATE CURL::libcurl)
 target_link_libraries(stravaApiTest PRIVATE ${CURL_LIBRARIES})
 target_link_libraries(stravaAcitvityTest PRIVATE ${CURL_LIBRARIES})
+
+add_executable(nlohmannTest tests/nlohmann_test.cpp
+        Activity.cpp
+        Activity.h
+        CurlRequests.cpp
+        CurlRequests.h
+        StravaURLs.cpp
+        StravaURLs.h
+        authorization/AuthorizationTokens.cpp
+        authorization/AuthorizationTokens.h
+        ActivityStorage.cpp
+        ActivityStorage.h)
+
+target_link_libraries(nlohmannTest PRIVATE nlohmann_json::nlohmann_json
+                CURL::libcurl)
 
