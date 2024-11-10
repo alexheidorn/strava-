@@ -84,6 +84,8 @@ add_library(strava__lib main.cpp
         StravaURLs.h
         authorization/AuthorizationTokens.cpp
         authorization/AuthorizationTokens.h
+        ActivityStorage.cpp
+        ActivityStorage.h
 )
 
 target_link_libraries(strava__lib PRIVATE CURL::libcurl)
@@ -98,6 +100,8 @@ add_executable(strava__ main.cpp
         StravaURLs.h
         authorization/AuthorizationTokens.cpp
         authorization/AuthorizationTokens.h
+        ActivityStorage.cpp
+        ActivityStorage.h
 )
 add_executable(curlTest tests/curl_test.cpp
         tests/strava_api_test.cpp
@@ -109,6 +113,8 @@ add_executable(curlTest tests/curl_test.cpp
         StravaURLs.h
         authorization/AuthorizationTokens.cpp
         authorization/AuthorizationTokens.h
+        ActivityStorage.cpp
+        ActivityStorage.h
 )
 add_executable(stravaApiTest tests/strava_api_test.cpp
         Activity.cpp
@@ -119,6 +125,8 @@ add_executable(stravaApiTest tests/strava_api_test.cpp
         StravaURLs.h
         authorization/AuthorizationTokens.cpp
         authorization/AuthorizationTokens.h
+        ActivityStorage.cpp
+        ActivityStorage.h
 )
 add_executable(stravaAcitvityTest tests/strava_activity_test.cpp
         Activity.cpp
@@ -129,6 +137,8 @@ add_executable(stravaAcitvityTest tests/strava_activity_test.cpp
         StravaURLs.h
         authorization/AuthorizationTokens.cpp
         authorization/AuthorizationTokens.h
+        ActivityStorage.cpp
+        ActivityStorage.h
 )
 
 target_link_libraries(strava__ PRIVATE CURL::libcurl)
