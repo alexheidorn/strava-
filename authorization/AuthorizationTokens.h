@@ -10,7 +10,12 @@
 class AuthorizationTokens {
     private:
         std::string clientID = "139095";
-        std::string clientSecret;
+        std::string clientSecret = "f8faf24737d498daba841d1ed163f82c700dc84a";
+        std::string authorizationCode = "7f312f64b54108f2fd2aec898bc275e2221c6a09";
+
+        std::string redirectURI = "http://localhost/exchange_token";
+        std::string scope = "read";
+        std::string responseType = "code";
 
     public:
         std::string access_token;
