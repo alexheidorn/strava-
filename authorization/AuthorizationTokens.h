@@ -9,7 +9,7 @@
 
 class AuthorizationTokens {
     private:
-        std::string clientID;
+        static int clientID = 139095;
         std::string clientSecret;
 
     public:
@@ -18,8 +18,8 @@ class AuthorizationTokens {
         std::string access_token_expires_at;
         std::string refresh_token_expires_at;
 
-        static std::string getClientID();
-        std::string getClientSecret();
+        static int getClientID();
+        static std::string getClientSecret();
 };
 
 
