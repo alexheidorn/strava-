@@ -7,7 +7,11 @@
 #include <iostream>
 
 
-void CurlRequests::requestAccessToken(const std::string access_token) {
+void CurlRequests::setAccessToken(const std::string& token) {
+    access_token = token;
+}
+
+std::string CurlRequests::requestAuthorizationToken(const std::string& access_token) {
 }
 
 // Set the Authorization header with the access token

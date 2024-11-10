@@ -18,7 +18,7 @@ static size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* use
 class CurlRequests {
 private:
     // Replace this with your Strava API access token
-    std::string access_token = "b658208ad9d504b41b7981b915dc1461947f15fe";
+    static std::string access_token;
     std::string readBuffer;
     CURL* curlHandle;
 
@@ -40,7 +40,8 @@ public:
     std::string stravaAthlete = "https://www.strava.com/api/v3/athlete";
     std::string stravaActivity = "https://www.strava.com/api/v3/athlete/activity";
 
-    void requestAccessToken(std::string access_token);
+    static void setAccessToken(const std::string& token);
+    std::string requestAuthorizationToken(const std::string& access_token);
     void setHeaders();
     CURLcode makeRequest(const char* stravaURL);
     std::string getReadBuffer();
