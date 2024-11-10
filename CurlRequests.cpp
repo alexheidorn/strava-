@@ -36,15 +36,20 @@ void CurlRequests::makeRequest(const char* stravaURL) {
 
     // Perform the request
     curlResult = curl_easy_perform(curlHandle);
+    checkForError();
+}
 
-    // Check for errors
+// Check for errors - returns FALSE if there IS an error
+bool CurlRequests::checkForError() {
     if(curlResult != CURLE_OK) {
         std::cerr << "curl_easy_perform() failed: " << curl_easy_strerror(curlResult) << std::endl;
+        return false;
     } else {
         std::cout << "Logged-in Athlete Information:\n" << readBuffer << std::endl;
+        return true;
     }
-
 }
+
 
 std::string CurlRequests::getReadBuffer() {
     return readBuffer;

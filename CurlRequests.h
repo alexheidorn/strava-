@@ -45,6 +45,7 @@ public:
     std::string requestAuthorizationToken(const std::string& access_token);
     void setHeaders();
     void makeRequest(const char* stravaURL);
+    bool checkForError();
     std::string getReadBuffer();
 
 };
