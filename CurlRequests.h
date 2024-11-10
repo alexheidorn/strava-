@@ -21,7 +21,6 @@ private:
     std::string access_token = "b658208ad9d504b41b7981b915dc1461947f15fe";
     std::string readBuffer;
     CURL* curlHandle;
-    CURLcode curlResult;
 
     struct curl_slist* curlHeaders = nullptr;
 
@@ -43,7 +42,8 @@ public:
 
     void requestAccessToken(std::string access_token);
     void setHeaders();
-    void makeRequest(const char* stravaURL);
+    CURLcode makeRequest(const char* stravaURL);
+    std::string getReadBuffer();
 
 };
 
