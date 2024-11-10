@@ -18,7 +18,7 @@ class AuthorizationTokens {
         std::string responseType = "code";
 
     public:
-        std::string access_token;
+        std::string access_token = "1693f696624a145e0657104cb332df3fe28b3675";
         std::string refresh_token;
         std::string access_token_expires_at;
         std::string refresh_token_expires_at;
