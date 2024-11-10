@@ -15,7 +15,7 @@ std::string CurlRequests::requestAuthorizationCode(const std::string& access_tok
 
 // Set the Authorization header with the access token
 void CurlRequests::setAuthorizationHeader() {
-    curlHeaders = curl_slist_append(curlHeaders, ("Authorization: Bearer " + tokens.access_token).c_str());
+    curlHeaders = curl_slist_append(curlHeaders, ("Authorization: Bearer " + tokens.getAccessToken()).c_str());
     curl_easy_setopt(curlHandle, CURLOPT_HTTPHEADER, curlHeaders);
 }
 
