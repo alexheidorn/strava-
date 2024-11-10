@@ -12,7 +12,8 @@ int main() {
     AuthorizationTokens tokens;
     StravaURLs stravaURLs;
     CurlRequests curlRequests;
-    curlRequests.setAccessToken(tokens.access_token);
+
+    // tokens.setAccessToken("1693f696624a145e0657104cb332df3fe28b3675");
 
     curlRequests.makeRequest(stravaURLs.stravaAthlete.c_str());
 
