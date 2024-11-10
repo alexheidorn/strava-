@@ -32,7 +32,9 @@
 *.app
 
 # Build directories
-*[B/b]uild*
+/*[B/b]uild*
+/cmake-build-debug
+/build
 
 # VSCode directories
 .idea
