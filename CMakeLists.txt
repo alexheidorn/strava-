@@ -75,6 +75,7 @@ include_directories(${CURL_INCLUDE_DIRS})
 add_library(strava__lib main.cpp
         tests/curl_test.cpp
         tests/strava_api_test.cpp
+        tests/strava_activity_test.cpp
         Activity.cpp
         Activity.h
         CurlRequests.cpp
@@ -119,7 +120,19 @@ add_executable(stravaApiTest tests/strava_api_test.cpp
         authorization/AuthorizationTokens.cpp
         authorization/AuthorizationTokens.h
 )
+add_executable(stravaAcitvityTest tests/strava_activity_test.cpp
+        Activity.cpp
+        Activity.h
+        CurlRequests.cpp
+        CurlRequests.h
+        StravaURLs.cpp
+        StravaURLs.h
+        authorization/AuthorizationTokens.cpp
+        authorization/AuthorizationTokens.h
+)
 
 target_link_libraries(strava__ PRIVATE CURL::libcurl)
 target_link_libraries(curlTest PRIVATE CURL::libcurl)
 target_link_libraries(stravaApiTest PRIVATE ${CURL_LIBRARIES})
+target_link_libraries(stravaAcitvityTest PRIVATE ${CURL_LIBRARIES})
+
