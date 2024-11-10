@@ -4,7 +4,7 @@
 
 #include "AuthorizationTokens.h"
 
-int AuthorizationTokens::getClientID() {
+std::string AuthorizationTokens::getClientID() {
     return clientID;
 }
 
