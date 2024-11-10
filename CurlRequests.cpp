@@ -7,18 +7,15 @@
 #include <iostream>
 
 
-void CurlRequests::setAccessToken(const std::string& token) {
-    access_token = token;
-}
 
-std::string CurlRequests::requestAuthorizationToken(const std::string& access_token) {
+std::string CurlRequests::requestAuthorizationCode(const std::string& access_token) {
     // // Temp placeholder return
     return access_token;
 }
 
 // Set the Authorization header with the access token
-void CurlRequests::setHeaders() {
-    curlHeaders = curl_slist_append(curlHeaders, ("Authorization: Bearer " + access_token).c_str());
+void CurlRequests::setAuthorizationHeader() {
+    curlHeaders = curl_slist_append(curlHeaders, ("Authorization: Bearer " + tokens.access_token).c_str());
     curl_easy_setopt(curlHandle, CURLOPT_HTTPHEADER, curlHeaders);
 }
 
@@ -28,7 +25,7 @@ void CurlRequests::makeRequest(const char* stravaURL) {
     curl_easy_setopt(curlHandle, CURLOPT_URL, stravaURL);
 
     // Set the Authorization header with the access token
-    setHeaders();
+    setAuthorizationHeader();
 
     // Set up the callback function to capture the response
     curl_easy_setopt(curlHandle, CURLOPT_WRITEFUNCTION, WriteCallback);
