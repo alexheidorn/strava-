@@ -12,6 +12,8 @@ void CurlRequests::setAccessToken(const std::string& token) {
 }
 
 std::string CurlRequests::requestAuthorizationToken(const std::string& access_token) {
+    // // Temp placeholder return
+    return access_token;
 }
 
 // Set the Authorization header with the access token
