@@ -79,6 +79,8 @@ add_library(strava__lib main.cpp
         Activity.h
         CurlRequests.cpp
         CurlRequests.h
+        StravaURLs.cpp
+        StravaURLs.h
 )
 
 target_link_libraries(strava__lib PRIVATE CURL::libcurl)
@@ -89,6 +91,8 @@ add_executable(strava__ main.cpp
         Activity.h
         CurlRequests.cpp
         CurlRequests.h
+        StravaURLs.cpp
+        StravaURLs.h
 )
 add_executable(curlTest tests/curl_test.cpp
         tests/strava_api_test.cpp
@@ -96,12 +100,16 @@ add_executable(curlTest tests/curl_test.cpp
         Activity.h
         CurlRequests.cpp
         CurlRequests.h
+        StravaURLs.cpp
+        StravaURLs.h
 )
 add_executable(stravaApiTest tests/strava_api_test.cpp
         Activity.cpp
         Activity.h
         CurlRequests.cpp
         CurlRequests.h
+        StravaURLs.cpp
+        StravaURLs.h
 )
 
 target_link_libraries(strava__ PRIVATE CURL::libcurl)
