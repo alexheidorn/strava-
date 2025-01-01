@@ -10,7 +10,7 @@ using json = nlohmann::json;
 
 int main() {
     // Open example JSON file
-    std::ifstream file("JSONs/example.json");
+    std::ifstream file("../JSONs/example.json");
     if (!file.is_open())
     {
         std::cerr << "Failed to open file" << std::endl;
