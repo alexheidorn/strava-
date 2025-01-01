@@ -8,9 +8,14 @@
 
 
 
-std::string CurlRequests::requestAuthorizationCode(const std::string& access_token) {
+std::string CurlRequests::retrieveAuthorizationCode(const std::string& redirectURI) {
+    // TODO: retrieve authorization code
+    // how to redirect to the Strava OAuth page?
+    // how to parse the URL to get the authorization code?
+
+    
     // // Temp placeholder return
-    return access_token;
+    return "access_token";
 }
 
 // Set the Authorization header with the access token
