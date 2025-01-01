@@ -13,10 +13,11 @@ class AuthorizationTokens {
         std::string clientSecret = "f8faf24737d498daba841d1ed163f82c700dc84a";
         std::string authorizationCode = "7f312f64b54108f2fd2aec898bc275e2221c6a09";
 
-        std::string access_token = "1693f696624a145e0657104cb332df3fe28b3675";
+        // token with read_all, activity:read_all
+        std::string access_token = "549e46879ac40b118e9af45e9566ac195b5528cc";
 
         std::string redirectURI = "http://localhost/exchange_token";
-        std::string scope = "read";
+        std::string scope = "read_all,activity:read_all";
         std::string responseType = "code";
 
     public:

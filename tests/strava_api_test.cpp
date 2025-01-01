@@ -14,7 +14,7 @@ static size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* use
 
 int main() {
     // Replace this with your Strava API access token
-    std::string access_token = "b658208ad9d504b41b7981b915dc1461947f15fe";
+    std::string access_token = "3bf29ace0bdeb69458d2b6a46523fd7f179b1393";
     std::string readBuffer;
 
     // Initialize CURL
