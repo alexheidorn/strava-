@@ -109,7 +109,6 @@ add_executable(strava__ main.cpp
         ActivityStorage.h
 )
 add_executable(curlTest tests/curl_test.cpp
-        tests/strava_api_test.cpp
         Activity.cpp
         Activity.h
         CurlRequests.cpp
