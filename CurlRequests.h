@@ -39,7 +39,18 @@ public:
         curl_slist_free_all(curlHeaders);
     }
 
-    std::string requestAuthorizationCode(const std::string& access_token);
+    // request access-> full authorization workflow
+    std::string requestAccess();
+
+    // get authorization code
+    std::string retrieveAuthorizationCode(const std::string& redirectURI);
+
+    // exchange authorization code for access token & refresh token
+    std::string exchangeToken(const std::string& authorizationCode);
+
+    // refresh access token
+    std::string refreshAccessToken(const std::string& refresh_token);
+
     void setAuthorizationHeader();
     void makeRequest(const char* stravaURL);
     bool checkForError();
