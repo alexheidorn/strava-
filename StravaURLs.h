@@ -18,7 +18,12 @@ class StravaURLs {
         // std::string stravaToken = "https://www.strava.com/oauth/token";
         // std::string stravaRefreshToken = "https://www.strava.com/oauth/token";
         std::string stravaOAuthPage = "http://www.strava.com/oauth/authorize?client_id=" + tokens.getClientID() +"&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=read_all,activity:read_all";
+        
         std::string stravaExchangeToken = "https://www.strava.com/oauth/token";
+        std::string exchange_post_fields = "client_id=" + std::string(client_id) +
+                                  "&client_secret=" + std::string(client_secret) +
+                                  "&code=" + std::string(code) +
+                                  "&grant_type=authorization_code";
 };
 
 
