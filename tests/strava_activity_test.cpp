@@ -30,7 +30,7 @@ int main() {
 
         // Set the Authorization header with the access token
         struct curl_slist* headers = nullptr;
-        headers = curl_slist_append(headers, ("Authorization: Bearer " + tokens.access_token).c_str());
+        headers = curl_slist_append(headers, ("Authorization: Bearer " + tokens.getAccessToken()).c_str());
         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
 
         // Set up the callback function to capture the response
