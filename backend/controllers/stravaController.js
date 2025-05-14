@@ -1,5 +1,6 @@
 const axios = require('axios');
 const Token = require('../models/Token');
+const { getValidAccessToken } = require('../services/tokenService');
 
 
 exports.redirectToStrava = (req, res) => {
@@ -39,15 +40,18 @@ exports.handleOAuthCallback = async (req, res) => {
 };
 
 exports.getActivities = async (req, res) => {
-  const { token } = req.query;
+  const { athleteId } = req.query;
 
   try {
+    const accessToken = await getValidAccessToken(Number(athleteId));
+
     const actRes = await axios.get(`https://www.strava.com/api/v3/athlete/activities`, {
-      headers: { Authorization: `Bearer ${token}` }
+      headers: { Authorization: `Bearer ${accessToken}` }
     });
 
     res.json(actRes.data);
   } catch (err) {
+    console.error(err);
     res.status(500).json({ error: 'Failed to fetch activities' });
   }
 };
