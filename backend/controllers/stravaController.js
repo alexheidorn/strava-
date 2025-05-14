@@ -1,4 +1,6 @@
 const axios = require('axios');
+const Token = require('../models/Token');
+
 
 exports.redirectToStrava = (req, res) => {
   const url = `https://www.strava.com/oauth/authorize?client_id=${process.env.STRAVA_CLIENT_ID}&response_type=code&redirect_uri=${process.env.STRAVA_REDIRECT_URI}&approval_prompt=auto&scope=activity:read`;
@@ -16,11 +18,23 @@ exports.handleOAuthCallback = async (req, res) => {
       grant_type: 'authorization_code'
     });
 
-    const { access_token, athlete } = tokenRes.data;
-    // Store access_token and athlete info (DB or in-memory)
-    res.json({ message: 'Authenticated', access_token, athlete });
+    const { access_token, refresh_token, expires_at, athlete } = tokenRes.data;
+
+    // Save or update token
+    await Token.findOneAndUpdate(
+      { athleteId: athlete.id },
+      {
+        accessToken: access_token,
+        refreshToken: refresh_token,
+        expiresAt: expires_at
+      },
+      { upsert: true, new: true }
+    );
+
+    res.json({ message: 'Token stored', athleteId: athlete.id });
   } catch (err) {
-    res.status(500).json({ error: 'Failed to get token' });
+    console.error(err);
+    res.status(500).json({ error: 'Token exchange failed' });
   }
 };
 
