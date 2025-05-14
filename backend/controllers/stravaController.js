@@ -4,7 +4,7 @@ const { getValidAccessToken } = require('../services/tokenService');
 
 
 exports.redirectToStrava = (req, res) => {
-  const url = `https://www.strava.com/oauth/authorize?client_id=${process.env.STRAVA_CLIENT_ID}&response_type=code&redirect_uri=${process.env.STRAVA_REDIRECT_URI}&approval_prompt=auto&scope=activity:read`;
+  const url = `https://www.strava.com/oauth/authorize?client_id=${process.env.STRAVA_CLIENT_ID}&response_type=code&redirect_uri=${process.env.STRAVA_REDIRECT_URI}&approval_prompt=auto&scope=read_all,activity:read_all`;
   res.redirect(url);
 };
 
