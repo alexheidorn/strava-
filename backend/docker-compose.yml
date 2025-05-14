@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    ports:
+      - '4000:4000'
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/stravaApp
+      - STRAVA_CLIENT_ID=your_client_id
+      - STRAVA_CLIENT_SECRET=your_client_secret
+      - BASE_URL=http://localhost:4000
+    volumes:
+      - .:/usr/src/app
+    restart: unless-stopped
+
+  mongo:
+    image: mongo:6
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - '27017:27017'
+
+volumes:
+  mongo-data:
