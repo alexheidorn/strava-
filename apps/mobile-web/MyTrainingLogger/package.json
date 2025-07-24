@@ -1,6 +1,7 @@
 {
   "name": "mytraininglogger",
-  "main": "expo-router/entry",
+  "main": "index.web.js", 
+  
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",
