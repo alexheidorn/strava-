@@ -10,9 +10,9 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
-    working_dir: /app/apps/backend
+    working_dir: /app/apps/api
     env_file:
-      - ./apps/backend/.env
+      - ./apps/api/.env
     depends_on:
       - db
 

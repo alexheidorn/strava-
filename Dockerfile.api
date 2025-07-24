@@ -3,7 +3,7 @@ RUN npm install -g pnpm
 WORKDIR /app
 # Copy monorepo context
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-COPY apps/backend/package.json ./apps/backend/
+COPY apps/api/package.json ./apps/api/
 COPY packages/shared/package.json ./packages/shared/
 
 # Install all workspace dependencies
@@ -12,7 +12,7 @@ RUN pnpm install
 # Copy full monorepo
 COPY . .
 
-WORKDIR /app/apps/backend
+WORKDIR /app/apps/api
 
 EXPOSE 4000
 
