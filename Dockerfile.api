@@ -1,0 +1,19 @@
+FROM node:20
+RUN npm install -g pnpm
+WORKDIR /app
+# Copy monorepo context
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY apps/backend/package.json ./apps/backend/
+COPY packages/shared/package.json ./packages/shared/
+
+# Install all workspace dependencies
+RUN pnpm install
+
+# Copy full monorepo
+COPY . .
+
+WORKDIR /app/apps/backend
+
+EXPOSE 4000
+
+CMD ["pnpm", "dev"]
