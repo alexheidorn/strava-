@@ -14,6 +14,8 @@ services:
 
   db:
     image: postgres:15
+    container_name: strava_db
+    restart: always
     ports:
       - "5432:5432"
     environment:
