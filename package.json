@@ -2,9 +2,10 @@
   "name": "strava-",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "expo-router/entry",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:api": "pnpm --filter ./apps/api dev"
   },
   "keywords": [],
   "author": "",
