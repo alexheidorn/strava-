@@ -8,7 +8,9 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./apps/backend:/app
+      - .:/app
+      - /app/node_modules
+    working_dir: /app/apps/backend
     env_file:
       - ./apps/backend/.env
     depends_on:
@@ -26,6 +28,23 @@ services:
       POSTGRES_DB: strava_log
     volumes:
       - pgdata:/var/lib/postgresql/data
+
+  mobile-web:
+    build:
+      context: .
+      dockerfile: Dockerfile.expo
+    ports:
+      - "19000:19000"
+      - "19001:19001"
+      - "19002:19002"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0
+      - REACT_NATIVE_PACKAGER_HOSTNAME=127.0.0.1
+    stdin_open: true
+    tty: true
 
 volumes:
   pgdata:
