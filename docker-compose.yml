@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  backend:
+    build: ./apps/backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./apps/backend:/app
+    env_file:
+      - ./apps/backend/.env
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: strava
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: strava_log
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
